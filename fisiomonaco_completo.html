@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FisioMonaco | Fisioterapia em Poá</title>
+
+    <meta name="description"
+        content="Conheça a FisioMonaco, clínica de fisioterapia em Poá, São Paulo. Confira os serviços e informações de contato.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f4faf6;
+            color: #183b32;
+            line-height: 1.7;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            background: linear-gradient(120deg, #063f32, #087f5b);
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            box-shadow: 0 4px 18px #063f3220;
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .marca img {
+            width: 60px;
+            height: 65px;
+            object-fit: contain;
+            background: white;
+            border-radius: 12px;
+            padding: 4px;
+        }
+
+        .marca h1 {
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .marca span {
+            display: block;
+            color: #c6f6dc;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #b7f7d5;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            background:
+                radial-gradient(circle at 90% 10%, #a8e6c7, transparent 35%),
+                linear-gradient(135deg, #e5f8ed, #c6ead6);
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #ffffffb8;
+            color: #087f5b;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .inicio h2 {
+            color: #063f32;
+            font-size: clamp(34px, 5vw, 55px);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.2;
+            margin-bottom: 22px;
+        }
+
+        .inicio p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            color: #38584c;
+            font-size: 16px;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #087f5b;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .botao:hover {
+            background: #065b43;
+            transform: translateY(-2px);
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 75px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo-secao span {
+            color: #087f5b;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .titulo-secao h2 {
+            color: #123d32;
+            font-size: clamp(26px, 4vw, 36px);
+            font-weight: 800;
+            margin-top: 8px;
+        }
+
+        .titulo-secao p {
+            color: #60766c;
+            margin-top: 10px;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            background: white;
+        }
+
+        .sobre-conteudo {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sobre-conteudo p {
+            color: #53695f;
+            margin-bottom: 15px;
+        }
+
+        /* SERVIÇOS */
+
+        .servicos {
+            background: #f4faf6;
+        }
+
+        .grade-servicos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e1eee6;
+            box-shadow: 0 8px 25px #124b3210;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px #124b3220;
+        }
+
+        .icone {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e1f6e9;
+            border-radius: 14px;
+            color: #087f5b;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #087f5b;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #60766c;
+            font-size: 14px;
+        }
+
+        /* CONTATO */
+
+        .contato {
+            background: #e7f5ec;
+        }
+
+        .grade-contato {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .grade-contato .card {
+            overflow-wrap: anywhere;
+        }
+
+        .grade-contato .card h3 {
+            color: #123d32;
+        }
+
+        .grade-contato .botao {
+            margin-top: 18px;
+            font-size: 12px;
+        }
+
+        .destaque-telefone {
+            font-size: 18px;
+            font-weight: 700;
+            color: #087f5b;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #063f32;
+            color: white;
+            text-align: center;
+            padding: 30px 8%;
+        }
+
+        footer h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #c6f6dc;
+            margin-top: 6px;
+        }
+
+        .voltar {
+            display: inline-block;
+            color: #c6f6dc;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        /* CELULAR E TABLET */
+
+        @media (max-width: 900px) {
+            .grade-servicos,
+            .grade-contato {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+                padding: 20px 5%;
+            }
+
+            .marca {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .inicio {
+                padding: 70px 6%;
+            }
+
+            .inicio h2 {
+                letter-spacing: -1px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .grade-servicos,
+            .grade-contato {
+                grid-template-columns: 1fr;
+            }
+
+            .card:hover {
+                transform: none;
+            }
+        }
+
+        /* ACESSIBILIDADE */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+        <div class="marca">
+            <img
+                src="data:image/png;base64,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"
+                alt="Símbolo da Fisioterapia"
+            >
+
+            <div>
+                <h1>FisioMonaco</h1>
+                <span>Saúde e movimento</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+
+        <section class="inicio" id="inicio">
+            <span class="etiqueta">
+                FISIOTERAPIA EM POÁ - SP
+            </span>
+
+            <h2>
+                Mais movimento.<br>
+                Mais qualidade de vida.
+            </h2>
+
+            <p>
+                Conheça a FisioMonaco, uma clínica da área
+                de fisioterapia em Poá, São Paulo.
+                Confira nossos serviços e encontre
+                nossas informações de contato.
+            </p>
+
+            <a class="botao" href="#servicos">
+                Conheça nossos serviços
+            </a>
+        </section>
+
+        <!-- SOBRE A CLÍNICA -->
+
+        <section class="sobre" id="sobre">
+            <div class="titulo-secao">
+                <span>Conheça a clínica</span>
+                <h2>Sobre a FisioMonaco</h2>
+            </div>
+
+            <div class="sobre-conteudo">
+                <p>
+                    A FisioMonaco é uma clínica localizada
+                    em Poá, São Paulo, dedicada à área
+                    da fisioterapia e aos cuidados com
+                    a saúde e o movimento.
+                </p>
+
+                <p>
+                    Entre em contato para conhecer os
+                    atendimentos disponíveis e obter
+                    mais informações sobre os serviços.
+                </p>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+
+        <section class="servicos" id="servicos">
+            <div class="titulo-secao">
+                <span>O que oferecemos</span>
+                <h2>Nossos serviços</h2>
+                <p>
+                    Conheça algumas das especialidades
+                    associadas à clínica.
+                </p>
+            </div>
+
+            <div class="grade-servicos">
+
+                <article class="card">
+                    <div class="icone">✚</div>
+                    <h3>Fisioterapia</h3>
+                    <p>
+                        Atendimento fisioterapêutico
+                        conforme as necessidades
+                        de cada paciente.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">♧</div>
+                    <h3>Quiropraxia</h3>
+                    <p>
+                        Atendimento especializado.
+                        Consulte a clínica para conhecer
+                        as opções disponíveis.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">✳</div>
+                    <h3>Acupuntura</h3>
+                    <p>
+                        Conheça os atendimentos
+                        de acupuntura oferecidos
+                        pelos profissionais.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">♙</div>
+                    <h3>RPG</h3>
+                    <p>
+                        Reeducação Postural Global.
+                        Entre em contato para saber mais.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">◉</div>
+                    <h3>Ventosaterapia</h3>
+                    <p>
+                        Consulte a clínica sobre
+                        a disponibilidade e as
+                        indicações do atendimento.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+
+        <section class="contato" id="contato">
+            <div class="titulo-secao">
+                <span>Estamos à disposição</span>
+                <h2>Entre em contato</h2>
+                <p>
+                    Confira os canais de contato
+                    e a localização da clínica.
+                </p>
+            </div>
+
+            <div class="grade-contato">
+
+                <article class="card">
+                    <div class="icone">☎</div>
+                    <h3>Telefone</h3>
+
+                    <p class="destaque-telefone">
+                        (11) 4638-3977
+                    </p>
+
+                    <a class="botao"
+                       href="tel:+551146383977">
+                        Ligar para a clínica
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="icone">⌖</div>
+                    <h3>Localização</h3>
+
+                    <p>
+                        Avenida Deputado Cunha Bueno,
+                        Centro, Poá - SP.
+                    </p>
+
+                    <p>
+                        CEP: 08561-310
+                    </p>
+
+                    <a class="botao"
+                       href="https://www.google.com/maps/search/?api=1&query=FisioMonaco+Po%C3%A1+SP"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Ver no Google Maps
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="icone">◎</div>
+                    <h3>Instagram</h3>
+
+                    <p>
+                        Acompanhe as publicações
+                        e novidades no perfil
+                        da clínica.
+                    </p>
+
+                    <a class="botao"
+                       href="https://www.instagram.com/fisiomonaco_/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visitar Instagram
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <h2>FisioMonaco</h2>
+        <p>Saúde e movimento em Poá - SP.</p>
+        <p>
+            &copy; 2026 FisioMonaco.
+            Todos os direitos reservados.
+        </p>
+
+        <a class="voltar" href="#inicio">
+            Voltar ao início ↑
+        </a>
+    </footer>
+
+</body>
+</html>
